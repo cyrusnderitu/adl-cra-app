@@ -1,0 +1,42 @@
+[
+    {
+    "id": 1,
+    "address": "12 Valley of Kings Geneva",
+    "country": "Switzerland",
+    "description": "This house has been designed and built to an impeccable standard offering luxious and elegant living. The accomodation is arranged over four floors comprising a large entrance hall, living room with tall sash windows.",
+    "price": 900000,
+    "photo": "100"
+    },
+    {
+    "id": 2,
+    "address": "1024 Ecublens VD",
+    "country": "Switzerland",
+    "description": "This house has been designed and built to an impeccable standard offering luxious and elegant living. The accomodation is arranged over four floors comprising a large entrance hall, living room with tall sash windows.",
+    "price": 500000,
+    "photo": "200"
+    },
+    {
+    "id": 3,
+    "address": "Hommelsedijk 31",
+    "country": "Netherlands",
+        "description": "This house has been designed and built to an impeccable standard offering luxious and elegant living. The accomodation is arranged over four floors comprising a large entrance hall, living room with tall sash windows.",
+    "price": 700000,
+    "photo": "300"
+    },
+    {
+    "id": 4,
+    "address": "Vikna 13",
+    "country": "Netherlands",
+        "description": "This house has been designed and built to an impeccable standard offering luxious and elegant living. The accomodation is arranged over four floors comprising a large entrance hall, living room with tall sash windows.",
+    "price": 200000,
+    "photo": "400"
+    },
+    {
+    "id": 5,
+    "address": "12 Valley of Kings Geneva",
+    "country": "Netherlands",
+        "description": "This house has been designed and built to an impeccable standard offering luxious and elegant living. The accomodation is arranged over four floors comprising a large entrance hall, living room with tall sash windows.",
+    "price": 800000,
+    "photo": "500"
+    }
+]

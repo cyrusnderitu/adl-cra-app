@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Header from './components/Header'
+import './App.css'
+import HouseFilter from './components/HouseFilter'
+import FeaturedHouse from './components/featured-house'
+import SearchResult from './components/SearchResult'
+import HouseQuery from './components/HouseQuery'
+import useHouses from './hooks/useHouses'
+import useFeatured from './hooks/useFeatured'
+import HouseContext from './context/houseContext'
 
-function App() {
+const App = () => {
+
+  const houses = useHouses();
+  const featuredHouse = useFeatured(houses);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router >
+      <HouseContext.Provider value={houses}>
+    <div className='container'>
+      <Header houses={featuredHouse}/>
+      <HouseFilter allHouses={houses}/>
+      <Routes >
+        <Route path='/' element={<FeaturedHouse house={featuredHouse}/>}/>
+        <Route path='/searchresult/:country' element={<SearchResult />}/>
+        <Route path='/houses/:id' element={<HouseQuery/>}/>
+      </Routes>
     </div>
-  );
+    </HouseContext.Provider>
+    </Router>
+  )
 }
 
-export default App;
+export default App
+
